@@ -5,11 +5,18 @@ public class ExportService
     private readonly IProductGroupRepository _groupRepo;
     private readonly IResponseGenerator _responseGen;
 
-    public ExportService(IProductRepository productRepo, IProductGroupRepository groupRepo, IResponseGenerator responseGen)
+    private readonly IFtpUploader _ftpUploader;
+
+    public ExportService(
+        IProductRepository productRepo,
+        IProductGroupRepository groupRepo,
+        IResponseGenerator responseGenerator,
+        IFtpUploader ftpUploader)
     {
         _productRepo = productRepo;
         _groupRepo = groupRepo;
-        _responseGen = responseGen;
+        _responseGenerator = responseGenerator;
+        _ftpUploader = ftpUploader;
     }
 
     public void RunExport(bool simulateSuccess)
@@ -21,7 +28,10 @@ public class ExportService
         var assignments = _groupRepo.GetProductGroupAssignments();
 
         var exportContent = AdmLodFileGenerator.Generate(products, groups, assignments);
-        var uploadSuccess = FtpClientMock.UploadExportFile(exportContent, !simulateSuccess);
+        _ftpUploader.Upload(exportContent, "adm_export.txt");
+        var uploadSuccess = true; // Assume success unless simulating failure
+        if (!simulateSuccess) uploadSuccess = false; // Simulate failure if needed
+
 
         if (!uploadSuccess)
         {
@@ -34,7 +44,7 @@ public class ExportService
         var response = _responseGen.GenerateResponse(exportContent);
         var result = ResponseParser.ParseResponse(response);
 
-        Logger.Info($"✅ Total Successes: {result.SuccessCount}");
-        Logger.Warn($"❌ Total Errors: {result.ErrorCount}");
+        Logger.Info($"Total Successes: {result.SuccessCount}");
+        Logger.Warn($"Total Errors: {result.ErrorCount}");
     }
 }

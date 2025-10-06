@@ -1,0 +1,58 @@
+# Quick orientation for AI coding agents
+
+Purpose: get productive fast in this repo by showing the architecture, key files/symbols, workflows, and repo-specific conventions.
+
+- Big picture
+  - CLI orchestrator: [`Program.Main`](src/Program.cs) wires services and parses CLI flags (see [src/Program.cs](src/Program.cs)).
+  - Export pipeline: generate -> write/upload -> parse response -> log. Core components:
+    - Generator: [`AdmLodFileGenerator`](src/Services/AdmLodFileGenerator.cs)
+    - Writer / FTP mock: [`AdmLodFileWriter`](src/AdmLodFileWriter.cs), [`FtpClientMock`](src/Services/FtpClientMock.cs)
+    - Response flow: [`IResponseGenerator`](src/Responses/IResponseGenerator.cs), [`MockResponseGenerator`](src/Responses/MockResponseGenerator.cs)
+    - Parser: [`ResponseParser.ParseResponse` / `ParseResponseFile`](src/Services/ResponseParser.cs)
+    - Orchestration service: [`ExportService`](src/Services/ExportService.cs)
+    - Logging: [`AdmLodExportSimulator.Logging.Logger`](src/Utilities/Logger.cs)
+
+- Runtime wiring and DI pattern
+  - `ExportService` is constructed with interfaces: [`IProductRepository`](src/Repositories/IProductRepository.cs), [`IProductGroupRepository`](src/Repositories/IProductGroupRepository.cs), and [`IResponseGenerator`](src/Responses/IResponseGenerator.cs).
+  - Concrete implementations wired in [`Program.cs`]: [`JsonProductRepository`](src/Repositories/JsonProductRepository.cs), [`JsonGroupRepository`](src/Repositories/JsonGroupRepository.cs), and [`MockResponseGenerator`](src/Responses/MockResponseGenerator.cs).
+  - Note: wiring is manual in `Program.cs` (not an IoC container) — change there to substitute mocks for tests.
+
+- Important file paths & data flow
+  - Config: [src/appsettings.json](src/appsettings.json) and model [src/AppSettings.cs](src/AppSettings.cs). CLI flags can override config.
+  - Mock data consumed by repos: [src/MockFiles/products.json](src/MockFiles/products.json) and [src/MockFiles/productgroups.json](src/MockFiles/productgroups.json). Repositories currently use the path literal "src/MockFiles/..." from `Program.cs`.
+  - Export file and responses live in `MockFiles/` (paths in config and `AdmLodFileWriter`): [src/MockFiles/adm_export.txt](src/MockFiles/adm_export.txt), [src/MockFiles/adm_response_success.txt](src/MockFiles/adm_response_success.txt), [src/MockFiles/adm_response_error.txt](src/MockFiles/adm_response_error.txt).
+
+- How to run / reproduce scenarios (developer workflows)
+  - Build: dotnet build (project file: [AdmLodPrototype.csproj](AdmLodPrototype.csproj))
+  - Run success scenario:
+    - dotnet run export --success
+    - This triggers upload simulation and parsing of the success response file.
+  - Run error scenario:
+    - dotnet run export --error
+    - `Program.cs` sets `settings.FeatureFlags.SimulateFtpFailure = true` when `--error` is present; `ExportService.RunExport` receives simulateSuccess = !SimulateFtpFailure.
+  - Optional logfile:
+    - dotnet run export --success --logfile audit.log
+    - Logging toggled by `Logger.Initialize(...)` and [src/appsettings.json](src/appsettings.json). See [`Logger.Initialize`](src/Utilities/Logger.cs).
+
+- Project-specific conventions & gotchas
+  - Paths are relative and sometimes inconsistent: `Program.cs` points repos to `"src/MockFiles/products.json"` but other code writes to `"MockFiles/adm_export.txt"`. If you see FileNotFound exceptions (see `logfile02`), confirm working directory and file path casing/relative root.
+  - Many components are static helpers (e.g., `FtpClientMock`, `AdmLodFileWriter`) — expect easier but manual testability. For unit tests, prefer using the interface-based classes (`IProductRepository`, `IProductGroupRepository`, `IResponseGenerator`) and inject fakes.
+  - Response parsing supports two modes:
+    - In-memory parsing: `ResponseParser.ParseResponse(string)` used by `MockResponseGenerator`.
+    - File parsing: `ResponseParser.ParseResponseFile(string)` reads `MockFiles/<filename>` and prints colored console output.
+  - Logging: `Logger` writes to console and optionally to a file (controlled by `AppSettings.Logging.EnableFileLogging` or CLI `--logfile`). See [src/Utilities/Logger.cs](src/Utilities/Logger.cs).
+
+- Recommended quick edits the agent may be asked to make
+  - Fix relative-path issues: update `Program.cs` repo file paths to use `settings.Paths` values or Path.Combine(Directory.GetCurrentDirectory(), ...). See [src/Program.cs](src/Program.cs) and [src/AppSettings.cs](src/AppSettings.cs).
+  - Convert static mocks to interfaces for testability: extract IFtpUploader from `FtpClientMock` and replace call sites in [`ExportService`](src/Services/ExportService.cs).
+  - Add unit tests that construct `ExportService` with fakes for `IProductRepository` / `IProductGroupRepository` to assert generated export content (`AdmLodFileGenerator.Generate(...)`).
+
+- Files to open first when changing behavior
+  - [src/Program.cs](src/Program.cs) — CLI & wiring
+  - [src/Services/ExportService.cs](src/Services/ExportService.cs) — main orchestration
+  - [src/Services/AdmLodFileGenerator.cs](src/Services/AdmLodFileGenerator.cs) — export format
+  - [src/Services/FtpClientMock.cs](src/Services/FtpClientMock.cs) and [src/AdmLodFileWriter.cs](src/AdmLodFileWriter.cs) — writing/upload behavior
+  - [src/Services/ResponseParser.cs](src/Services/ResponseParser.cs) and [src/Responses/MockResponseGenerator.cs](src/Responses/MockResponseGenerator.cs) — response simulation and parsing
+  - [src/Utilities/Logger.cs](src/Utilities/Logger.cs) — logging conventions
+
+If anything above is unclear or you want the file to emphasize additional patterns (tests, CI hooks, or a specific refactor), tell me which sections to expand or adjust.

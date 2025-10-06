@@ -3,32 +3,18 @@ using System;
 using System.IO;
 using AdmLodExportSimulator.Logging;
 
-public static class FtpClientMock
+
+using AdmLodPrototype.Services;
+using AdmLodExportSimulator.Logging;
+
+namespace AdmLodPrototype.Services
 {
-    private const string ExportFileName = "adm_export.txt";
-    private const string MockFilesDirectory = "MockFiles";
-
-    public static bool UploadExportFile(string content, bool simulateFailure)
+    public class FtpClientMock : IFtpUploader
     {
-        string filePath = Path.Combine(MockFilesDirectory, ExportFileName);
-
-        try
+        public void Upload(string fileContent, string fileName)
         {
-            if (simulateFailure)
-            {
-                Logger.Warn("Simulating FTP failure...");
-                throw new IOException("Simulated FTP upload failure.");
-            }
-
-            Directory.CreateDirectory(MockFilesDirectory);
-            File.WriteAllText(filePath, content);
-            Logger.Success($"Export file successfully written to {filePath}");
-            return true;
-        }
-        catch (Exception ex)
-        {
-            Logger.Error($"FTP upload failed: {ex.Message}");
-            return false;
+            File.WriteAllText($"MockFiles/{fileName}", fileContent);
+            Logger.Log($"[FTP] Uploaded {fileName} to MockFiles/");
         }
     }
 }

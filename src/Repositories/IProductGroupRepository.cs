@@ -1,5 +1,10 @@
-public interface IProductGroupRepository
+using AdmLodPrototype.Models;
+
+namespace AdmLodPrototype.Services.Interfaces
 {
-    IEnumerable<string> GetProductGroups();
-    Dictionary<string, List<string>> GetProductGroupAssignments();
+    public interface IProductGroupRepository
+    {
+        IEnumerable<ProductGroup> GetProductGroups();
+        IEnumerable<ProductGroupAssignment> GetProductGroupAssignments();
+    }
 }
