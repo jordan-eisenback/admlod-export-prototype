@@ -1,0 +1,7 @@
+{
+  "Groups": ["DIESEL", "GASOLINE"],
+  "Assignments": {
+    "DIESEL": ["D01"],
+    "GASOLINE": ["G01", ""]
+  }
+}

@@ -1,0 +1,40 @@
+# Technical Specification (TS)
+
+## Project Title:
+[Insert project name]
+
+## Prepared By:
+[Your name or team]
+
+## Date:
+[MM/DD/YYYY]
+
+---
+
+## 1. Architecture Overview
+Describe the system structure and flow.
+
+## 2. Technology Stack
+- Language: [e.g., C#]
+- Framework: [.NET 6+]
+- Dependencies: [List]
+
+## 3. Module Responsibilities
+| Module | Responsibility |
+|--------|----------------|
+| Program.cs | CLI orchestration |
+| Logger.cs | Logging actions and errors |
+
+## 4. Data Flow
+Describe how data moves through the system.
+
+## 5. File Structure
+List key files and directories.
+
+## 6. Logging Standards
+- Severity levels
+- Timestamp format
+- Correlation ID usage
+
+## 7. Extensibility Notes
+- How to add new scenarios or modules

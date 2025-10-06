@@ -1,0 +1,100 @@
+🧭 Purpose
+This checklist helps new developers ramp up quickly by guiding them through the business context, technical setup, and key workflows of the ADMLOD Export Prototype.
+
+✅ Phase 1: Understand the Business Context
+
+
+Read /docs/business/BusinessContext.md
+→ Understand what ADMLOD is and why this prototype exists.
+
+
+Review /docs/business/Glossary.md
+→ Learn key terms like Product Group, FTP Simulation, and DTN Response.
+
+
+Explore /docs/business/Personas.md
+→ Know who the stakeholders are and what they care about.
+
+
+Walk through /docs/business/BusinessScenarios.md
+→ See how the prototype maps to real-world use cases.
+
+
+
+✅ Phase 2: Review the Requirements
+
+
+Start with /docs/specs/01.Business Requirements Specification.docx
+→ Understand the scope, rules, and success criteria.
+
+
+Read /docs/specs/02.Functional Specification.docx
+→ Learn how the CLI works and what features are expected.
+
+
+Study /docs/specs/03.Technical Specification.docx
+→ Get familiar with the architecture and module responsibilities.
+
+
+Review /docs/specs/04.User Stories.docx
+→ Understand what each feature is meant to do and how it’s validated.
+
+
+
+✅ Phase 3: Set Up Locally
+
+
+Install .NET 6.0 SDK or later
+→ https://dotnet.microsoft.com/download
+
+
+Clone the repo
+→ Make sure you have access to the source code and /MockFiles
+
+
+Build the project
+Shelldotnet buildShow more lines
+
+
+Run a success scenario
+Shelldotnet run export --successShow more lines
+
+
+Run an error scenario
+Shelldotnet run export --error --logfile error.logShow more lines
+
+
+
+✅ Phase 4: Validate and Extend
+
+
+Review logs and output files
+→ Check /MockFiles/adm_export.txt and response files
+
+
+Modify mock data in MockData.cs
+→ Add or remove fields to simulate validation errors
+
+
+Explore CLI options
+→ Try combinations of --success, --error, and --logfile
+
+
+Use /docs/quality/TestSummaryReport.md
+→ Confirm expected behavior and test coverage
+
+
+
+✅ Phase 5: Collaborate and Contribute
+
+
+Follow coding standards in /docs/development/06.Coding Guidelines.docx
+
+
+Use the runbook /docs/development/08.Runbook.docx for troubleshooting
+
+
+Document changes in the README or create a new scenario in /docs/business/BusinessScenarios.md
+
+
+Ask questions using the personas as a guide—know who to go to for business vs technical clarification

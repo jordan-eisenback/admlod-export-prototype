@@ -1,0 +1,44 @@
+# Test Plan
+
+## Project Title:
+[Insert project name]
+
+## Prepared By:
+[Your name or team]
+
+## Date:
+[MM/DD/YYYY]
+
+---
+
+## 1. Objectives
+- Validate business and functional requirements
+
+## 2. Scope
+### In Scope:
+- [List features to test]
+
+### Out of Scope:
+- [List exclusions]
+
+## 3. Environment
+- OS: [Windows/Linux/Mac]
+- SDK: [.NET 6+]
+
+## 4. Test Cases
+| ID | Description | Steps | Expected Result |
+|----|-------------|-------|-----------------|
+| TC-01 | Export Success | Run CLI | File generated, log confirms |
+
+## 5. Test Data
+Describe mock data used.
+
+## 6. Responsibilities
+| Role | Responsibility |
+|------|----------------|
+| QA | Execute tests |
+| Dev | Fix defects |
+
+## 7. Acceptance Criteria
+- All test cases pass
+- Logs and outputs are reviewable

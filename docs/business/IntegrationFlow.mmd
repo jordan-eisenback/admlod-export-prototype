@@ -1,0 +1,24 @@
+
+flowchart TD
+    A[CLI Trigger<br/>dotnet run export --success<br/><i>Simulates a business export operation</i>] --> B[Program.cs<br/>Main orchestration<br/><i>Initiates the export flow</i>]
+    B --> C[MockData.cs<br/>Provides mock Products & Groups<br/><i>Represents business catalog data</i>]
+    C --> D[AdmLodFileGen.cs<br/>Generates ADMLOD export file<br/><i>Formats data for DTN ingestion</i>]
+    D --> E[adm_export.txt<br/>Saved to /MockFiles<br/><i>Business payload for transmission</i>]
+    E --> F[FtpClientMock.cs<br/>Simulates FTP upload<br/><i>Tests file transfer logic</i>]
+    F --> G[Simulated FTP Upload<br/>Local write + log<br/><i>Validates integration readiness</i>]
+    G --> H[ResponseParser.cs<br/>Parses DTN response file<br/><i>Checks business rule enforcement</i>]
+    H --> I[adm_response_success.txt / adm_response_error.txt<br/><i>Simulated feedback from DTN</i>]
+    I --> J[Logger.cs<br/>Logs actions & errors<br/><i>Provides audit trail for stakeholders</i>]
+    J --> K[Console Output / Log File<br/><i>Used for QA and stakeholder review</i>]
+
+    style A fill:#cce5ff,stroke:#007bff,stroke-width:2px
+    style B fill:#e2e3e5,stroke:#6c757d
+    style C fill:#d4edda,stroke:#28a745
+    style D fill:#d4edda,stroke:#28a745
+    style E fill:#f8f9fa,stroke:#6c757d
+    style F fill:#fff3cd,stroke:#ffc107
+    style G fill:#fff3cd,stroke:#ffc107
+    style H fill:#f8d7da,stroke:#dc3545
+    style I fill:#f8f9fa,stroke:#6c757d
+    style J fill:#e2e3e5,stroke:#6c757d
+    style K fill:#cce5ff,stroke:#007bff

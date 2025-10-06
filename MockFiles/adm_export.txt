@@ -1,0 +1,10 @@
+VERSION;2.4;
+EXPORT;PGRP;;Y;
+MERGE;PGRP;DIESEL;
+MERGE;PGRP;GASOLINE;
+MERGE;PRODUCT;D01;Diesel #1;D;
+MERGE;PRODUCT;G01;Gasoline Regular;G;
+# ERROR: Invalid product entry -> Code: '', Name: 'Gasoline Premium', Family: 'G'
+MERGE;PGRPPROD;DIESEL;D01;
+MERGE;PGRPPROD;GASOLINE;G01;
+# ERROR: Invalid assignment -> Group: 'GASOLINE', Code: ''

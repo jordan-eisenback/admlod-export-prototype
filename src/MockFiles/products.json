@@ -1,0 +1,5 @@
+[
+  { "Code": "D01", "Name": "Diesel #1", "Family": "D" },
+  { "Code": "G01", "Name": "Gasoline Regular", "Family": "G" },
+  { "Code": "", "Name": "Gasoline Premium", "Family": "G" }
+]

@@ -1,0 +1,11 @@
+File: adm_response_error.txt
+
+Input Line #1 EXPORT;PGRP;;Y;
+Success.
+MERGE;PGRP;DIESEL
+MERGE;PRODUCT;G01;;G
+Error: Missing Product Name
+MERGE;PRODUCT;E01;Ethanol 95
+Error: Missing Product Family
+MERGE;PRODUCT;;Gasoline Premium;G
+Error: Missing Product Code

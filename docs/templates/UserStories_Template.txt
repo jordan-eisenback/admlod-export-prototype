@@ -1,0 +1,17 @@
+# User Stories
+
+## Format:
+As a [role], I want to [goal], so that [value]
+
+---
+
+### Story 1: [Title]
+**As a** [role]  
+**I want to** [goal]  
+**So that** [value]  
+**Business Context:** [Why this matters]  
+**Acceptance Criteria:**
+- [Criterion 1]
+- [Criterion 2]
+
+[Repeat for each story]

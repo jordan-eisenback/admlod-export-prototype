@@ -1,0 +1,54 @@
+# ✅ Test Summary Report – DTN ADMLOD Export Prototype
+
+**Prepared by:** Jordan Eisenback  
+**Date:** October 5, 2025  
+
+---
+
+## 🎯 Purpose
+
+This report summarizes the results of test cases executed to validate the ADMLOD Export Prototype. The goal was to confirm that the system meets functional and non-functional requirements, handles error scenarios gracefully, and supports configuration-driven behavior.
+
+---
+
+## 🧪 Test Execution Summary
+
+| Test Case ID | Description                                      | Result   | Notes |
+|--------------|--------------------------------------------------|----------|-------|
+| TC-01        | CLI Export Success                               | ✅ Pass  | Export file generated, FTP simulated, response parsed |
+| TC-02        | CLI Export Error (DTN Response)                  | ✅ Pass  | Error response parsed, errors logged |
+| TC-03        | FTP Failure Simulation                           | ✅ Pass  | Simulated via CLI flag, failure logged |
+| TC-04        | Missing Required Fields                          | ✅ Pass  | Invalid product entries triggered errors |
+| TC-05        | Invalid Command Format                           | ✅ Pass  | Malformed lines detected and logged |
+| TC-06        | Logging to File                                  | ✅ Pass  | Log file created and populated correctly |
+| TC-07        | CLI Option Handling                              | ✅ Pass  | Invalid/missing options handled gracefully |
+| TC-08        | Review Output Files                              | ✅ Pass  | ADMLOD format verified, response clarity confirmed |
+
+---
+
+## 📋 Acceptance Criteria
+
+- Export file matches ADMLOD specification  
+- FTP upload is simulated and logged  
+- Response feedback reflects command validity  
+- CLI supports flexible testing via flags  
+- All services are injected and testable in isolation  
+- Logs include severity, timestamps, and correlation IDs  
+
+All criteria were met during testing.
+
+---
+
+## 🐞 Defects Logged
+
+| ID | Description | Status |
+|----|-------------|--------|
+| D-001 | Missing product name not logged in early build | ✅ Resolved |
+| D-002 | CLI `--logfile` not writing to file | ✅ Resolved |
+| D-003 | Invalid assignment not triggering error | ✅ Resolved |
+
+---
+
+## ✅ Conclusion
+
+The ADMLOD Export Prototype has passed all functional and error-handling test cases. It is ready for stakeholder review and documentation finalization.
