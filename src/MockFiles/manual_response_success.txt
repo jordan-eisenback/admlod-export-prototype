@@ -1,0 +1,10 @@
+Warning: Unrecognized line format -> VERSION;2.4;
+Warning: Unrecognized line format -> EXPORT;PGRP;;Y;
+Success: MERGE;PGRP;DIESEL;
+Success: MERGE;PGRP;GASOLINE;
+Success: MERGE;PRODUCT;D01;Diesel #1;D;
+Success: MERGE;PRODUCT;G01;Gasoline Regular;G;
+Error: Invalid product entry -> Code: '', Name: 'Gasoline Premium', Family: 'G'
+Success: MERGE;PGRPPROD;DIESEL;D01;
+Success: MERGE;PGRPPROD;GASOLINE;G01;
+Error: Invalid assignment -> Group: 'GASOLINE', Code: ''

@@ -1,0 +1,6 @@
+2025-10-07 13:30:59 [INFO] Starting ADMLOD Export Prototype
+2025-10-07 13:30:59 [INFO] Generating ADMLOD export file...
+2025-10-07 13:30:59 [INFO] [FTP] Uploaded src/MockFiles/manual_export.txt to adm_export.txt
+2025-10-07 13:30:59 [SUCCESS] Simulated FTP upload completed.
+2025-10-07 13:30:59 [INFO] Total Successes: 6
+2025-10-07 13:30:59 [WARN] Total Errors: 2

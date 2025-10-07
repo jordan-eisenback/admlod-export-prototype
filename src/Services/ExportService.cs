@@ -1,50 +1,84 @@
 using AdmLodExportSimulator.Logging;
-public class ExportService
+using AdmLodPrototype.Interfaces;
+using AdmLodPrototype.Models;
+using System.IO;
+using System.Linq;
+
+namespace AdmLodPrototype.Services
 {
-    private readonly IProductRepository _productRepo;
-    private readonly IProductGroupRepository _groupRepo;
-    private readonly IResponseGenerator _responseGen;
-
-    private readonly IFtpUploader _ftpUploader;
-
-    public ExportService(
-        IProductRepository productRepo,
-        IProductGroupRepository groupRepo,
-        IResponseGenerator responseGenerator,
-        IFtpUploader ftpUploader)
+    public class ExportService
     {
-        _productRepo = productRepo;
-        _groupRepo = groupRepo;
-        _responseGenerator = responseGenerator;
-        _ftpUploader = ftpUploader;
-    }
+        private readonly IProductRepository _productRepository;
+        private readonly IProductGroupRepository _productGroupRepository;
+        private readonly IResponseGenerator _responseGenerator;
+        private readonly IFtpUploader _ftpUploader;
 
-    public void RunExport(bool simulateSuccess)
-    {
-        Logger.Info("Generating ADMLOD export file...");
-
-        var products = _productRepo.GetProducts();
-        var groups = _groupRepo.GetProductGroups();
-        var assignments = _groupRepo.GetProductGroupAssignments();
-
-        var exportContent = AdmLodFileGenerator.Generate(products, groups, assignments);
-        _ftpUploader.Upload(exportContent, "adm_export.txt");
-        var uploadSuccess = true; // Assume success unless simulating failure
-        if (!simulateSuccess) uploadSuccess = false; // Simulate failure if needed
-
-
-        if (!uploadSuccess)
+        public ExportService(
+            IProductRepository productRepository,
+            IProductGroupRepository productGroupRepository,
+            IResponseGenerator responseGenerator,
+            IFtpUploader ftpUploader)
         {
-            Logger.Error("Simulated FTP upload failed.");
-            return;
+            _productRepository = productRepository;
+            _productGroupRepository = productGroupRepository;
+            _responseGenerator = responseGenerator;
+            _ftpUploader = ftpUploader;
         }
 
-        Logger.Success("Simulated FTP upload completed.");
+        public void RunExport(
+            bool simulateSuccess,
+            string exportFilePath,
+            string responseSuccessPath,
+            string responseErrorPath)
+        {
+            Logger.Info("Generating ADMLOD export file...");
 
-        var response = _responseGen.GenerateResponse(exportContent);
-        var result = ResponseParser.ParseResponse(response);
+            var products = _productRepository.GetProducts();
+            var productGroups = _productGroupRepository.GetProductGroups();
+            var productGroupAssignments = _productGroupRepository.GetProductGroupAssignments();
 
-        Logger.Info($"Total Successes: {result.SuccessCount}");
-        Logger.Warn($"Total Errors: {result.ErrorCount}");
+            var groupNames = productGroups.Select(g => g.Name);
+            var assignments = productGroupAssignments.ToDictionary(a => a.GroupName, a => a.ProductCodes);
+
+            var exportContent = AdmLodFileGenerator.Generate(products, groupNames, assignments);
+            AdmLodFileWriter.WriteExportFile(exportContent, exportFilePath);
+            _ftpUploader.Upload(exportFilePath, "adm_export.txt");
+
+            var uploadSuccess = simulateSuccess;
+
+            // Handle simulated FTP failure
+            if (!uploadSuccess)
+            {
+                Logger.Error("Simulated FTP upload failed.");
+
+                var errorResponse = _responseGenerator.GenerateResponse(exportContent);
+                if (!string.IsNullOrWhiteSpace(responseErrorPath))
+                {
+                    File.WriteAllText(responseErrorPath, errorResponse);
+                }
+
+                return;
+            }
+
+            Logger.Success("Simulated FTP upload completed.");
+
+            var response = _responseGenerator.GenerateResponse(exportContent);
+
+            if (!string.IsNullOrWhiteSpace(response))
+            {
+                var result = ResponseParser.ParseResponse(response);
+                Logger.Info($"Total Successes: {result.SuccessCount}");
+                Logger.Warn($"Total Errors: {result.ErrorCount}");
+            }
+            else
+            {
+                Logger.Warn("No response generated to parse.");
+            }
+
+            if (simulateSuccess && !string.IsNullOrWhiteSpace(responseSuccessPath))
+            {
+                File.WriteAllText(responseSuccessPath, response);
+            }
+        }
     }
 }

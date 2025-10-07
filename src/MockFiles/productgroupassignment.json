@@ -1,0 +1,4 @@
+[
+  { "GroupName": "Fuel Group", "ProductCodes": ["D01", "G01"] },
+  { "GroupName": "Premium Group", "ProductCodes": ["G01", ""] }
+]

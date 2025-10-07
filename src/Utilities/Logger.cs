@@ -7,21 +7,32 @@ namespace AdmLodExportSimulator.Logging
 {
     public static class Logger
     {
-        private static string? _logFile;
+        private static string? _logFilePath;
 
-        public static void Initialize(string? logFile)
+        public static void Initialize(string? logFilePath)
         {
-            _logFile = logFile;
+            _logFilePath = logFilePath;
         }
 
-        public static void Log(string message, string severity = "INFO")
+        public static void Log(string message, string severity)
         {
-            string timestamped = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} [{severity}] {message}";
-            Console.WriteLine(timestamped);
-
-            if (!string.IsNullOrEmpty(_logFile))
+            try
             {
-                File.AppendAllText(_logFile, timestamped + Environment.NewLine);
+                var logMessage = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} [{severity}] {message}";
+                Console.WriteLine(logMessage);
+
+                if (!string.IsNullOrWhiteSpace(_logFilePath))
+                {
+                    using (var stream = new FileStream(_logFilePath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
+                    using (var writer = new StreamWriter(stream))
+                    {
+                        writer.WriteLine(logMessage);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"?? Logger failed to write: {ex.Message}");
             }
         }
 

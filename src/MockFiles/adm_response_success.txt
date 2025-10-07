@@ -1,9 +1,0 @@
-File: adm_response_success.txt
-
-Input Line #1 EXPORT;PGRP;;Y;
-Success.
-MERGE;PGRP;DIESEL
-MERGE;PGRP;GASOLINE
-MERGE;PRODUCT;D01;Diesel #1;D
-MERGE;PRODUCT;G01;Gasoline Regular;G
-MERGE;PRODUCT;E01;Ethanol 95;E

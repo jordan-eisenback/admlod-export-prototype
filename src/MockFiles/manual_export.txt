@@ -2,17 +2,9 @@ VERSION;2.4;
 EXPORT;PGRP;;Y;
 MERGE;PGRP;DIESEL;
 MERGE;PGRP;GASOLINE;
-MERGE;PGRP;ETHANOL;
 MERGE;PRODUCT;D01;Diesel #1;D;
 MERGE;PRODUCT;G01;Gasoline Regular;G;
-MERGE;PRODUCT;E01;Ethanol 95;E;
 # ERROR: Invalid product entry -> Code: '', Name: 'Gasoline Premium', Family: 'G'
-# ERROR: Invalid product entry -> Code: 'G02', Name: '', Family: 'G'
-MERGE;PRODUCT;INVALID_LINE;???;123;
 MERGE;PGRPPROD;DIESEL;D01;
 MERGE;PGRPPROD;GASOLINE;G01;
 # ERROR: Invalid assignment -> Group: 'GASOLINE', Code: ''
-MERGE;PGRPPROD;ETHANOL;E01;
-# ERROR: Invalid assignment -> Group: 'ETHANOL', Code: ''
-# ERROR: Invalid assignment -> Group: '', Code: 'D01'
-MERGE;PGRPPROD;INVALID_GROUP;X99;

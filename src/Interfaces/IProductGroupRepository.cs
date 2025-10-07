@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using AdmLodPrototype.Models;
 
-namespace AdmLodPrototype.Services.Interfaces
+namespace AdmLodPrototype.Interfaces
 {
     public interface IProductGroupRepository
     {

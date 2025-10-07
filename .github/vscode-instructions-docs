@@ -56,3 +56,57 @@ Purpose: get productive fast in this repo by showing the architecture, key files
   - [src/Utilities/Logger.cs](src/Utilities/Logger.cs) — logging conventions
 
 If anything above is unclear or you want the file to emphasize additional patterns (tests, CI hooks, or a specific refactor), tell me which sections to expand or adjust.
+
+# Copilot Instructions for AdmLod Export Prototype
+
+## Project Overview
+This prototype simulates ADMLOD export functionality with mocked FTP and response handling.
+
+## Key Architecture Components
+
+### Repository Pattern
+- JSON-based repositories in `src/Repositories/`
+- Interfaces defined in `src/Interfaces/`
+- Caching implementation for performance
+Example:
+```csharp
+public class JsonGroupRepository : IProductGroupRepository {
+    private GroupData? _cachedData; // Performance optimization
+}
+```
+
+### Mocked Services
+- FTP operations simulated via file system
+- Response generation mocked for testing
+See [`src/Services/FtpClientMock.cs`](src/Services/FtpClientMock.cs) for pattern
+
+### Testing Patterns
+- Use temp directories for file operations
+- Clean up test artifacts in cleanup
+- Mock external dependencies
+Example from [`AdmLodPrototype.Tests/Services/FtpClientMockTests.cs`](AdmLodPrototype.Tests/Services/FtpClientMockTests.cs):
+```csharp
+_mockDirectory = Path.Combine(Path.GetTempPath(), $"MockFiles_{Guid.NewGuid()}");
+// ...cleanup...
+if (Directory.Exists(mockDirectory)) Directory.Delete(mockDirectory);
+```
+
+### Logging Convention
+- Use `AdmLodExportSimulator.Logging.Logger`
+- Tag logs with component prefix (e.g. "[FTP]")
+```csharp
+Logger.Log($"[FTP] Uploaded {localFilePath} to {remoteFilePath}");
+```
+
+## Development Workflow
+
+### Build and Test
+```powershell
+dotnet clean
+dotnet build
+dotnet test
+```
+
+### Mock Data
+- Sample files in `src/MockFiles/`
+- JSON structure for products and groups
