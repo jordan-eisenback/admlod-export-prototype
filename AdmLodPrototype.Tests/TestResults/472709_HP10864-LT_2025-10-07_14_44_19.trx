@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="3bed69f5-305b-46ca-be59-5e108c8d873a" name="472709@HP10864-LT 2025-10-07 14:44:19" runUser="PILOTCORP\472709" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-10-07T14:44:19.5265556-04:00" queuing="2025-10-07T14:44:19.5265568-04:00" start="2025-10-07T14:44:17.7128707-04:00" finish="2025-10-07T14:44:20.5978656-04:00" />
+  <TestSettings name="default" id="86004bef-495a-43a7-9d66-c220681291e1">
+    <Deployment runDeploymentRoot="472709_HP10864-LT_2025-10-07_14_44_19" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="1e6e6d64-67e6-4fab-a804-3c76d8d97347" testId="45396e7d-c1c2-fffc-955a-7eed6f226218" testName="AdmLodFileGeneratorTests.ShouldReportMissingProductFields" computerName="HP10864-LT" duration="00:00:00.0004134" startTime="2025-10-07T14:44:19.4769978-04:00" endTime="2025-10-07T14:44:19.4769979-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e6e6d64-67e6-4fab-a804-3c76d8d97347" />
+    <UnitTestResult executionId="d3b63d85-84f8-46ae-9b21-ca6ec1a01b8d" testId="9d1319bb-7c76-b2a7-7a04-8ffc61d37c9a" testName="FtpClientMockTests.UploadFileAsync_ShouldWriteFileToMockDirectory" computerName="HP10864-LT" duration="00:00:00.0070174" startTime="2025-10-07T14:44:20.5099460-04:00" endTime="2025-10-07T14:44:20.5099465-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3b63d85-84f8-46ae-9b21-ca6ec1a01b8d" />
+    <UnitTestResult executionId="802aaf6e-ba88-4583-af5e-8cb7ea3fb003" testId="e1029a2f-dd08-6044-08b6-6b884db1b807" testName="ProductGroupTests.ProductGroup_ShouldThrowIfNameIsEmpty" computerName="HP10864-LT" duration="00:00:00.0005220" startTime="2025-10-07T14:44:19.4766095-04:00" endTime="2025-10-07T14:44:19.4766096-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="802aaf6e-ba88-4583-af5e-8cb7ea3fb003" />
+    <UnitTestResult executionId="0e23689e-dfd0-4938-826c-190f41fdaf13" testId="c10c8df3-56e6-79e0-8448-1188e776ba58" testName="JsonGroupRepositoryTests.GetProductGroupAssignments_ShouldReturnAssignments" computerName="HP10864-LT" duration="00:00:00.0442255" startTime="2025-10-07T14:44:19.4796469-04:00" endTime="2025-10-07T14:44:19.4796470-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e23689e-dfd0-4938-826c-190f41fdaf13" />
+    <UnitTestResult executionId="fdfc188b-cb53-40b5-8a80-258f6bc57109" testId="9c90d8fc-7408-a914-2f53-f59bfe2d6da7" testName="AdmLodFileGeneratorTests.ShouldGenerateValidMergeLines" computerName="HP10864-LT" duration="00:00:00.0242202" startTime="2025-10-07T14:44:19.4769283-04:00" endTime="2025-10-07T14:44:19.4769284-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fdfc188b-cb53-40b5-8a80-258f6bc57109" />
+    <UnitTestResult executionId="a4c355ac-3d51-4d4c-a78a-8eb77bec049d" testId="641b9667-d560-329a-3ca8-7299a60e4dcc" testName="LoggerTests.Log_ShouldWriteInfoMessageToFile" computerName="HP10864-LT" duration="00:00:00.0092107" startTime="2025-10-07T14:44:19.4799213-04:00" endTime="2025-10-07T14:44:19.4799214-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4c355ac-3d51-4d4c-a78a-8eb77bec049d" />
+    <UnitTestResult executionId="6c18f99c-5e7d-4c43-b38d-39d4fcfca5c4" testId="c77228e2-e714-f75f-b885-6132e3942cab" testName="ExportServiceTests.RunExport_ShouldLogError_WhenSimulationFails" computerName="HP10864-LT" duration="00:00:00.1568304" startTime="2025-10-07T14:44:19.5719596-04:00" endTime="2025-10-07T14:44:19.5719601-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c18f99c-5e7d-4c43-b38d-39d4fcfca5c4" />
+    <UnitTestResult executionId="16fb6757-306d-403e-a4c1-96ad163f0a85" testId="d427418e-ff77-4a8e-dde5-8eed08b5895b" testName="ProgramTest.Main_WithValidArgs_ShouldGenerateExpectedFiles(baseArgs: [&quot;export&quot;, &quot;--success&quot;, &quot;--logfile&quot;])" computerName="HP10864-LT" duration="00:00:00.0408623" startTime="2025-10-07T14:44:19.5401288-04:00" endTime="2025-10-07T14:44:19.5401292-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="16fb6757-306d-403e-a4c1-96ad163f0a85" />
+    <UnitTestResult executionId="56b6ffaf-60ea-47f7-9267-3cc6f52bc0a6" testId="721cb35b-9369-929c-c3ce-12f36fdaeb7b" testName="FtpClientMockTests.Upload_ShouldCopyFileToMockDirectory" computerName="HP10864-LT" duration="00:00:00.0151601" startTime="2025-10-07T14:44:19.5383706-04:00" endTime="2025-10-07T14:44:19.5383711-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="56b6ffaf-60ea-47f7-9267-3cc6f52bc0a6" />
+    <UnitTestResult executionId="adaeef38-f408-45c9-8240-c3b0d6650501" testId="c5efe745-68d3-a58d-5d8e-70d4babe9d13" testName="JsonGroupRepositoryTests.GetProductGroups_ShouldReturnGroupNames" computerName="HP10864-LT" duration="00:00:00.0053029" startTime="2025-10-07T14:44:19.4797096-04:00" endTime="2025-10-07T14:44:19.4797096-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="adaeef38-f408-45c9-8240-c3b0d6650501" />
+    <UnitTestResult executionId="93a415f6-5f95-454b-b434-6dc0325dcf36" testId="c15ee511-f676-b786-d052-eb0b2e15d6f8" testName="FtpClientMockTests.Upload_ShouldLogMessageAsync" computerName="HP10864-LT" duration="00:00:00.1125600" startTime="2025-10-07T14:44:20.3873088-04:00" endTime="2025-10-07T14:44:20.3873093-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="93a415f6-5f95-454b-b434-6dc0325dcf36" />
+    <UnitTestResult executionId="e43d7855-bd97-4e4e-a6a2-a151221f0343" testId="aefc25c3-2bf6-896d-9c70-63f4847ce2fc" testName="ProgramTest.Main_WithValidArgs_ShouldGenerateExpectedFiles(baseArgs: [&quot;export&quot;, &quot;--error&quot;])" computerName="HP10864-LT" duration="00:00:00.0213010" startTime="2025-10-07T14:44:19.4969736-04:00" endTime="2025-10-07T14:44:19.4969749-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e43d7855-bd97-4e4e-a6a2-a151221f0343" />
+    <UnitTestResult executionId="935abf32-6107-48bc-afe6-de03b5ce9f7a" testId="9b1a9fc0-9751-1710-ed65-888f7a7925b8" testName="MockResponseGeneratorTests.ShouldReturnSuccessForMergeLines" computerName="HP10864-LT" duration="00:00:00.0001461" startTime="2025-10-07T14:44:19.4764974-04:00" endTime="2025-10-07T14:44:19.4764977-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="935abf32-6107-48bc-afe6-de03b5ce9f7a" />
+    <UnitTestResult executionId="173644b7-c4dd-4971-8a45-b55b9f530faf" testId="017552a4-1174-2cc8-24ab-00a2491983b5" testName="ProgramTest.Main_WithValidArgs_ShouldGenerateExpectedFiles(baseArgs: [&quot;export&quot;, &quot;--success&quot;])" computerName="HP10864-LT" duration="00:00:00.0603177" startTime="2025-10-07T14:44:19.4798454-04:00" endTime="2025-10-07T14:44:19.4798455-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="173644b7-c4dd-4971-8a45-b55b9f530faf" />
+    <UnitTestResult executionId="a0992cc3-31bb-4b53-99bb-a94990b49460" testId="12b48d8b-3651-4157-4bc2-856a35d8eaf3" testName="AdmLodFileWriterTests.WriteExportFile_ShouldCreateFileWithExpectedContent" computerName="HP10864-LT" duration="00:00:00.0154148" startTime="2025-10-07T14:44:19.4766453-04:00" endTime="2025-10-07T14:44:19.4766454-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0992cc3-31bb-4b53-99bb-a94990b49460" />
+    <UnitTestResult executionId="3f52f1d7-f0d2-482c-aa9e-5889d35dd785" testId="0bdcc666-f6cd-653e-32e2-e0a6e4337076" testName="ProductTests.Product_ShouldAllowNullValues" computerName="HP10864-LT" duration="00:00:00.0047237" startTime="2025-10-07T14:44:19.4526341-04:00" endTime="2025-10-07T14:44:19.4526342-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f52f1d7-f0d2-482c-aa9e-5889d35dd785" />
+    <UnitTestResult executionId="2a79f670-314c-4c13-920d-028944eb4d2c" testId="1f4c58fd-6160-fecb-f1df-f54c45326b97" testName="FtpClientMockTests.Upload_ShouldLogMessage" computerName="HP10864-LT" duration="00:00:00.5188720" startTime="2025-10-07T14:44:20.1679569-04:00" endTime="2025-10-07T14:44:20.1679574-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a79f670-314c-4c13-920d-028944eb4d2c" />
+    <UnitTestResult executionId="7ad5da24-87c3-473d-9d95-95cb5f641e59" testId="d08793e1-c5b5-985f-2291-994d928fccec" testName="JsonProductRepositoryTests.GetProducts_ShouldReturnParsedProducts" computerName="HP10864-LT" duration="00:00:00.0414026" startTime="2025-10-07T14:44:19.4795853-04:00" endTime="2025-10-07T14:44:19.4795855-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ad5da24-87c3-473d-9d95-95cb5f641e59" />
+    <UnitTestResult executionId="3c255cda-68c8-4315-9fe1-4672f2a59a09" testId="43e785b0-c94e-bd5d-2f90-cb6a334e7a64" testName="ProductGroupAssignmentTests.ProductGroupAssignment_ShouldThrowIfInvalid" computerName="HP10864-LT" duration="00:00:00.0061787" startTime="2025-10-07T14:44:19.4519158-04:00" endTime="2025-10-07T14:44:19.4519164-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c255cda-68c8-4315-9fe1-4672f2a59a09" />
+    <UnitTestResult executionId="eccb3eb6-3b5c-4b19-8c5e-5329ed43f9a4" testId="e17fcd72-90f2-3bd3-f4c2-cf8f82508923" testName="ProductGroupTests.ProductGroup_ShouldStoreName" computerName="HP10864-LT" duration="00:00:00.0049736" startTime="2025-10-07T14:44:19.4465308-04:00" endTime="2025-10-07T14:44:19.4465731-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eccb3eb6-3b5c-4b19-8c5e-5329ed43f9a4" />
+    <UnitTestResult executionId="c5fb882f-3715-4fe6-b9e1-97a7a8d25453" testId="d25f0d51-95ce-b0ca-c566-6464207bc324" testName="ExportServiceTests.RunExport_ShouldLogSuccess_WhenSimulationIsSuccessful" computerName="HP10864-LT" duration="00:00:00.0116741" startTime="2025-10-07T14:44:19.5838864-04:00" endTime="2025-10-07T14:44:19.5838871-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5fb882f-3715-4fe6-b9e1-97a7a8d25453" />
+    <UnitTestResult executionId="a2bab7d8-5f01-4b61-8319-08efab47b971" testId="685b6528-4258-be1b-e11f-899d4eef4a15" testName="ProductTests.Product_ShouldStorePropertiesCorrectly" computerName="HP10864-LT" duration="00:00:00.0001469" startTime="2025-10-07T14:44:19.4765734-04:00" endTime="2025-10-07T14:44:19.4765735-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a2bab7d8-5f01-4b61-8319-08efab47b971" />
+    <UnitTestResult executionId="a4b1e65a-d581-4780-9226-6f86a9aacfcf" testId="07fee0d7-34e5-2871-d964-db0fe5d25f92" testName="ResponseParserTests.ShouldCountSuccessAndErrorLines" computerName="HP10864-LT" duration="00:00:00.0226696" startTime="2025-10-07T14:44:19.4768751-04:00" endTime="2025-10-07T14:44:19.4768752-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4b1e65a-d581-4780-9226-6f86a9aacfcf" />
+    <UnitTestResult executionId="8ec0a7d2-6151-419b-b756-5129eb4b14d1" testId="6618aee7-47d4-7edf-2100-f3f46f6942b5" testName="AppSettingsTests.ShouldLoadAppSettingsFromConfiguration" computerName="HP10864-LT" duration="00:00:00.0260387" startTime="2025-10-07T14:44:19.4770461-04:00" endTime="2025-10-07T14:44:19.4770461-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8ec0a7d2-6151-419b-b756-5129eb4b14d1" />
+    <UnitTestResult executionId="c9f91f84-5ab1-4b5e-8be2-2b575c0cb431" testId="c38470ea-b0ff-6367-f1b4-978310c03bb0" testName="SmokeTests.ShouldPass" computerName="HP10864-LT" duration="00:00:00.0045488" startTime="2025-10-07T14:44:19.4525874-04:00" endTime="2025-10-07T14:44:19.4525875-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9f91f84-5ab1-4b5e-8be2-2b575c0cb431" />
+    <UnitTestResult executionId="69f641b5-6932-49fa-b20d-e7e68f80c28d" testId="dde9be2a-4860-0869-463e-e09eaa4750bf" testName="LoggerTests.Log_ShouldNotFailIfLogFileIsNull" computerName="HP10864-LT" duration="00:00:00.0109740" startTime="2025-10-07T14:44:19.4542026-04:00" endTime="2025-10-07T14:44:19.4542033-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69f641b5-6932-49fa-b20d-e7e68f80c28d" />
+    <UnitTestResult executionId="e7394087-93a9-427c-abb8-41c9dbc24998" testId="95a872a1-1a02-c0fe-8e60-690b35eebaf9" testName="LoggerTests.Log_ShouldWriteErrorMessageToFile" computerName="HP10864-LT" duration="00:00:00.0354075" startTime="2025-10-07T14:44:19.4797685-04:00" endTime="2025-10-07T14:44:19.4797685-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e7394087-93a9-427c-abb8-41c9dbc24998" />
+    <UnitTestResult executionId="932285e9-adbc-4b0e-b2e9-6c0a16e2f65a" testId="a8f27671-537b-52b2-c1a8-ee0fc4977097" testName="MockResponseGeneratorTests.ShouldReturnErrorForErrorLines" computerName="HP10864-LT" duration="00:00:00.0054658" startTime="2025-10-07T14:44:19.4525452-04:00" endTime="2025-10-07T14:44:19.4525458-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="932285e9-adbc-4b0e-b2e9-6c0a16e2f65a" />
+    <UnitTestResult executionId="42bd1ca8-3f3f-4029-9fa6-32278a53c016" testId="25f6f985-8768-d5f9-6b76-f8ef7955cac2" testName="AdmLodFileWriterTests.WriteExportFile_ShouldThrowIfPathIsInvalid" computerName="HP10864-LT" duration="00:00:00.0037539" startTime="2025-10-07T14:44:19.4768128-04:00" endTime="2025-10-07T14:44:19.4768129-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42bd1ca8-3f3f-4029-9fa6-32278a53c016" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="ResponseParserTests.ShouldCountSuccessAndErrorLines" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="07fee0d7-34e5-2871-d964-db0fe5d25f92">
+      <Execution id="a4b1e65a-d581-4780-9226-6f86a9aacfcf" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ResponseParserTests" name="ShouldCountSuccessAndErrorLines" />
+    </UnitTest>
+    <UnitTest name="AppSettingsTests.ShouldLoadAppSettingsFromConfiguration" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="6618aee7-47d4-7edf-2100-f3f46f6942b5">
+      <Execution id="8ec0a7d2-6151-419b-b756-5129eb4b14d1" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AppSettingsTests" name="ShouldLoadAppSettingsFromConfiguration" />
+    </UnitTest>
+    <UnitTest name="MockResponseGeneratorTests.ShouldReturnSuccessForMergeLines" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="9b1a9fc0-9751-1710-ed65-888f7a7925b8">
+      <Execution id="935abf32-6107-48bc-afe6-de03b5ce9f7a" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="MockResponseGeneratorTests" name="ShouldReturnSuccessForMergeLines" />
+    </UnitTest>
+    <UnitTest name="ProgramTest.Main_WithValidArgs_ShouldGenerateExpectedFiles(baseArgs: [&quot;export&quot;, &quot;--error&quot;])" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="aefc25c3-2bf6-896d-9c70-63f4847ce2fc">
+      <Execution id="e43d7855-bd97-4e4e-a6a2-a151221f0343" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProgramTest" name="Main_WithValidArgs_ShouldGenerateExpectedFiles" />
+    </UnitTest>
+    <UnitTest name="ProductTests.Product_ShouldAllowNullValues" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="0bdcc666-f6cd-653e-32e2-e0a6e4337076">
+      <Execution id="3f52f1d7-f0d2-482c-aa9e-5889d35dd785" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProductTests" name="Product_ShouldAllowNullValues" />
+    </UnitTest>
+    <UnitTest name="LoggerTests.Log_ShouldWriteErrorMessageToFile" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="95a872a1-1a02-c0fe-8e60-690b35eebaf9">
+      <Execution id="e7394087-93a9-427c-abb8-41c9dbc24998" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LoggerTests" name="Log_ShouldWriteErrorMessageToFile" />
+    </UnitTest>
+    <UnitTest name="MockResponseGeneratorTests.ShouldReturnErrorForErrorLines" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="a8f27671-537b-52b2-c1a8-ee0fc4977097">
+      <Execution id="932285e9-adbc-4b0e-b2e9-6c0a16e2f65a" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="MockResponseGeneratorTests" name="ShouldReturnErrorForErrorLines" />
+    </UnitTest>
+    <UnitTest name="FtpClientMockTests.UploadFileAsync_ShouldWriteFileToMockDirectory" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="9d1319bb-7c76-b2a7-7a04-8ffc61d37c9a">
+      <Execution id="d3b63d85-84f8-46ae-9b21-ca6ec1a01b8d" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="FtpClientMockTests" name="UploadFileAsync_ShouldWriteFileToMockDirectory" />
+    </UnitTest>
+    <UnitTest name="JsonGroupRepositoryTests.GetProductGroupAssignments_ShouldReturnAssignments" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="c10c8df3-56e6-79e0-8448-1188e776ba58">
+      <Execution id="0e23689e-dfd0-4938-826c-190f41fdaf13" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JsonGroupRepositoryTests" name="GetProductGroupAssignments_ShouldReturnAssignments" />
+    </UnitTest>
+    <UnitTest name="ProgramTest.Main_WithValidArgs_ShouldGenerateExpectedFiles(baseArgs: [&quot;export&quot;, &quot;--success&quot;])" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="017552a4-1174-2cc8-24ab-00a2491983b5">
+      <Execution id="173644b7-c4dd-4971-8a45-b55b9f530faf" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProgramTest" name="Main_WithValidArgs_ShouldGenerateExpectedFiles" />
+    </UnitTest>
+    <UnitTest name="AdmLodFileWriterTests.WriteExportFile_ShouldThrowIfPathIsInvalid" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="25f6f985-8768-d5f9-6b76-f8ef7955cac2">
+      <Execution id="42bd1ca8-3f3f-4029-9fa6-32278a53c016" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AdmLodFileWriterTests" name="WriteExportFile_ShouldThrowIfPathIsInvalid" />
+    </UnitTest>
+    <UnitTest name="ProductGroupAssignmentTests.ProductGroupAssignment_ShouldThrowIfInvalid" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="43e785b0-c94e-bd5d-2f90-cb6a334e7a64">
+      <Execution id="3c255cda-68c8-4315-9fe1-4672f2a59a09" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProductGroupAssignmentTests" name="ProductGroupAssignment_ShouldThrowIfInvalid" />
+    </UnitTest>
+    <UnitTest name="ProductTests.Product_ShouldStorePropertiesCorrectly" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="685b6528-4258-be1b-e11f-899d4eef4a15">
+      <Execution id="a2bab7d8-5f01-4b61-8319-08efab47b971" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProductTests" name="Product_ShouldStorePropertiesCorrectly" />
+    </UnitTest>
+    <UnitTest name="AdmLodFileWriterTests.WriteExportFile_ShouldCreateFileWithExpectedContent" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="12b48d8b-3651-4157-4bc2-856a35d8eaf3">
+      <Execution id="a0992cc3-31bb-4b53-99bb-a94990b49460" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AdmLodFileWriterTests" name="WriteExportFile_ShouldCreateFileWithExpectedContent" />
+    </UnitTest>
+    <UnitTest name="ProductGroupTests.ProductGroup_ShouldThrowIfNameIsEmpty" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="e1029a2f-dd08-6044-08b6-6b884db1b807">
+      <Execution id="802aaf6e-ba88-4583-af5e-8cb7ea3fb003" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProductGroupTests" name="ProductGroup_ShouldThrowIfNameIsEmpty" />
+    </UnitTest>
+    <UnitTest name="LoggerTests.Log_ShouldNotFailIfLogFileIsNull" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="dde9be2a-4860-0869-463e-e09eaa4750bf">
+      <Execution id="69f641b5-6932-49fa-b20d-e7e68f80c28d" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LoggerTests" name="Log_ShouldNotFailIfLogFileIsNull" />
+    </UnitTest>
+    <UnitTest name="ExportServiceTests.RunExport_ShouldLogSuccess_WhenSimulationIsSuccessful" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="d25f0d51-95ce-b0ca-c566-6464207bc324">
+      <Execution id="c5fb882f-3715-4fe6-b9e1-97a7a8d25453" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ExportServiceTests" name="RunExport_ShouldLogSuccess_WhenSimulationIsSuccessful" />
+    </UnitTest>
+    <UnitTest name="ProgramTest.Main_WithValidArgs_ShouldGenerateExpectedFiles(baseArgs: [&quot;export&quot;, &quot;--success&quot;, &quot;--logfile&quot;])" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="d427418e-ff77-4a8e-dde5-8eed08b5895b">
+      <Execution id="16fb6757-306d-403e-a4c1-96ad163f0a85" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProgramTest" name="Main_WithValidArgs_ShouldGenerateExpectedFiles" />
+    </UnitTest>
+    <UnitTest name="SmokeTests.ShouldPass" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="c38470ea-b0ff-6367-f1b4-978310c03bb0">
+      <Execution id="c9f91f84-5ab1-4b5e-8be2-2b575c0cb431" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="SmokeTests" name="ShouldPass" />
+    </UnitTest>
+    <UnitTest name="FtpClientMockTests.Upload_ShouldCopyFileToMockDirectory" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="721cb35b-9369-929c-c3ce-12f36fdaeb7b">
+      <Execution id="56b6ffaf-60ea-47f7-9267-3cc6f52bc0a6" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="FtpClientMockTests" name="Upload_ShouldCopyFileToMockDirectory" />
+    </UnitTest>
+    <UnitTest name="JsonGroupRepositoryTests.GetProductGroups_ShouldReturnGroupNames" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="c5efe745-68d3-a58d-5d8e-70d4babe9d13">
+      <Execution id="adaeef38-f408-45c9-8240-c3b0d6650501" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JsonGroupRepositoryTests" name="GetProductGroups_ShouldReturnGroupNames" />
+    </UnitTest>
+    <UnitTest name="ExportServiceTests.RunExport_ShouldLogError_WhenSimulationFails" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="c77228e2-e714-f75f-b885-6132e3942cab">
+      <Execution id="6c18f99c-5e7d-4c43-b38d-39d4fcfca5c4" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ExportServiceTests" name="RunExport_ShouldLogError_WhenSimulationFails" />
+    </UnitTest>
+    <UnitTest name="ProductGroupTests.ProductGroup_ShouldStoreName" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="e17fcd72-90f2-3bd3-f4c2-cf8f82508923">
+      <Execution id="eccb3eb6-3b5c-4b19-8c5e-5329ed43f9a4" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="ProductGroupTests" name="ProductGroup_ShouldStoreName" />
+    </UnitTest>
+    <UnitTest name="FtpClientMockTests.Upload_ShouldLogMessageAsync" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="c15ee511-f676-b786-d052-eb0b2e15d6f8">
+      <Execution id="93a415f6-5f95-454b-b434-6dc0325dcf36" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="FtpClientMockTests" name="Upload_ShouldLogMessageAsync" />
+    </UnitTest>
+    <UnitTest name="AdmLodFileGeneratorTests.ShouldReportMissingProductFields" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="45396e7d-c1c2-fffc-955a-7eed6f226218">
+      <Execution id="1e6e6d64-67e6-4fab-a804-3c76d8d97347" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AdmLodFileGeneratorTests" name="ShouldReportMissingProductFields" />
+    </UnitTest>
+    <UnitTest name="JsonProductRepositoryTests.GetProducts_ShouldReturnParsedProducts" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="d08793e1-c5b5-985f-2291-994d928fccec">
+      <Execution id="7ad5da24-87c3-473d-9d95-95cb5f641e59" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="JsonProductRepositoryTests" name="GetProducts_ShouldReturnParsedProducts" />
+    </UnitTest>
+    <UnitTest name="FtpClientMockTests.Upload_ShouldLogMessage" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="1f4c58fd-6160-fecb-f1df-f54c45326b97">
+      <Execution id="2a79f670-314c-4c13-920d-028944eb4d2c" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="FtpClientMockTests" name="Upload_ShouldLogMessage" />
+    </UnitTest>
+    <UnitTest name="LoggerTests.Log_ShouldWriteInfoMessageToFile" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="641b9667-d560-329a-3ca8-7299a60e4dcc">
+      <Execution id="a4c355ac-3d51-4d4c-a78a-8eb77bec049d" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LoggerTests" name="Log_ShouldWriteInfoMessageToFile" />
+    </UnitTest>
+    <UnitTest name="AdmLodFileGeneratorTests.ShouldGenerateValidMergeLines" storage="c:\users\472709\onedrive - pilot travel centers llc\admlodprototype\admlodprototype.tests\bin\debug\net8.0\admlodprototype.tests.dll" id="9c90d8fc-7408-a914-2f53-f59bfe2d6da7">
+      <Execution id="fdfc188b-cb53-40b5-8a80-258f6bc57109" />
+      <TestMethod codeBase="C:\Users\472709\OneDrive - PILOT TRAVEL CENTERS LLC\AdmLodPrototype\AdmLodPrototype.Tests\bin\Debug\net8.0\AdmLodPrototype.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="AdmLodFileGeneratorTests" name="ShouldGenerateValidMergeLines" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="45396e7d-c1c2-fffc-955a-7eed6f226218" executionId="1e6e6d64-67e6-4fab-a804-3c76d8d97347" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9d1319bb-7c76-b2a7-7a04-8ffc61d37c9a" executionId="d3b63d85-84f8-46ae-9b21-ca6ec1a01b8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e1029a2f-dd08-6044-08b6-6b884db1b807" executionId="802aaf6e-ba88-4583-af5e-8cb7ea3fb003" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c10c8df3-56e6-79e0-8448-1188e776ba58" executionId="0e23689e-dfd0-4938-826c-190f41fdaf13" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9c90d8fc-7408-a914-2f53-f59bfe2d6da7" executionId="fdfc188b-cb53-40b5-8a80-258f6bc57109" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="641b9667-d560-329a-3ca8-7299a60e4dcc" executionId="a4c355ac-3d51-4d4c-a78a-8eb77bec049d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c77228e2-e714-f75f-b885-6132e3942cab" executionId="6c18f99c-5e7d-4c43-b38d-39d4fcfca5c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d427418e-ff77-4a8e-dde5-8eed08b5895b" executionId="16fb6757-306d-403e-a4c1-96ad163f0a85" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="721cb35b-9369-929c-c3ce-12f36fdaeb7b" executionId="56b6ffaf-60ea-47f7-9267-3cc6f52bc0a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c5efe745-68d3-a58d-5d8e-70d4babe9d13" executionId="adaeef38-f408-45c9-8240-c3b0d6650501" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c15ee511-f676-b786-d052-eb0b2e15d6f8" executionId="93a415f6-5f95-454b-b434-6dc0325dcf36" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aefc25c3-2bf6-896d-9c70-63f4847ce2fc" executionId="e43d7855-bd97-4e4e-a6a2-a151221f0343" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b1a9fc0-9751-1710-ed65-888f7a7925b8" executionId="935abf32-6107-48bc-afe6-de03b5ce9f7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="017552a4-1174-2cc8-24ab-00a2491983b5" executionId="173644b7-c4dd-4971-8a45-b55b9f530faf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="12b48d8b-3651-4157-4bc2-856a35d8eaf3" executionId="a0992cc3-31bb-4b53-99bb-a94990b49460" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0bdcc666-f6cd-653e-32e2-e0a6e4337076" executionId="3f52f1d7-f0d2-482c-aa9e-5889d35dd785" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f4c58fd-6160-fecb-f1df-f54c45326b97" executionId="2a79f670-314c-4c13-920d-028944eb4d2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d08793e1-c5b5-985f-2291-994d928fccec" executionId="7ad5da24-87c3-473d-9d95-95cb5f641e59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="43e785b0-c94e-bd5d-2f90-cb6a334e7a64" executionId="3c255cda-68c8-4315-9fe1-4672f2a59a09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e17fcd72-90f2-3bd3-f4c2-cf8f82508923" executionId="eccb3eb6-3b5c-4b19-8c5e-5329ed43f9a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d25f0d51-95ce-b0ca-c566-6464207bc324" executionId="c5fb882f-3715-4fe6-b9e1-97a7a8d25453" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="685b6528-4258-be1b-e11f-899d4eef4a15" executionId="a2bab7d8-5f01-4b61-8319-08efab47b971" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07fee0d7-34e5-2871-d964-db0fe5d25f92" executionId="a4b1e65a-d581-4780-9226-6f86a9aacfcf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6618aee7-47d4-7edf-2100-f3f46f6942b5" executionId="8ec0a7d2-6151-419b-b756-5129eb4b14d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c38470ea-b0ff-6367-f1b4-978310c03bb0" executionId="c9f91f84-5ab1-4b5e-8be2-2b575c0cb431" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dde9be2a-4860-0869-463e-e09eaa4750bf" executionId="69f641b5-6932-49fa-b20d-e7e68f80c28d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="95a872a1-1a02-c0fe-8e60-690b35eebaf9" executionId="e7394087-93a9-427c-abb8-41c9dbc24998" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a8f27671-537b-52b2-c1a8-ee0fc4977097" executionId="932285e9-adbc-4b0e-b2e9-6c0a16e2f65a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="25f6f985-8768-d5f9-6b76-f8ef7955cac2" executionId="42bd1ca8-3f3f-4029-9fa6-32278a53c016" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="29" executed="29" passed="29" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.5+1caef2f33e (64-bit .NET 8.0.20)&#xD;
+[xUnit.net 00:00:00.65]   Discovering: AdmLodPrototype.Tests&#xD;
+[xUnit.net 00:00:00.71]   Discovered:  AdmLodPrototype.Tests&#xD;
+[xUnit.net 00:00:00.71]   Starting:    AdmLodPrototype.Tests&#xD;
+2025-10-07 14:44:19 [ERROR] This is an error message&#xD;
+2025-10-07 14:44:19 [INFO] Starting ADMLOD Export Prototype&#xD;
+2025-10-07 14:44:19 [INFO] Generating ADMLOD export file...&#xD;
+2025-10-07 14:44:19 [INFO] This is an info message&#xD;
+2025-10-07 14:44:19 [INFO] Starting ADMLOD Export Prototype&#xD;
+2025-10-07 14:44:19 [INFO] Generating ADMLOD export file...&#xD;
+2025-10-07 14:44:19 [INFO] [FTP] Uploaded MockFiles/adm_export_b7b2ebe7-79d6-49c3-a39b-226a750030be.txt to adm_export.txt&#xD;
+2025-10-07 14:44:19 [ERROR] Simulated FTP upload failed.&#xD;
+2025-10-07 14:44:19 [INFO] Starting ADMLOD Export Prototype&#xD;
+2025-10-07 14:44:19 [INFO] Generating ADMLOD export file...&#xD;
+2025-10-07 14:44:19 [INFO] [FTP] Uploaded MockFiles/adm_export_ac086da0-10a8-4506-a901-bc834ef65480.txt to adm_export.txt&#xD;
+2025-10-07 14:44:19 [SUCCESS] Simulated FTP upload completed.&#xD;
+2025-10-07 14:44:19 [INFO] Total Successes: 2&#xD;
+2025-10-07 14:44:19 [WARN] Total Errors: 1&#xD;
+2025-10-07 14:44:19 [INFO] Generating ADMLOD export file...&#xD;
+Logger initialized with: C:\Users\472709\AppData\Local\Temp\test_log_7510e7fb-9873-4141-b05f-c8a1b08e3346.txt&#xD;
+2025-10-07 14:44:19 [INFO] [FTP] Uploaded C:\Users\472709\AppData\Local\Temp\MockFiles_9223c401-2609-4d71-a692-151fca459fb5\testfile.txt to remote_testfile.txt&#xD;
+2025-10-07 14:44:19 [ERROR] Simulated FTP upload failed.&#xD;
+2025-10-07 14:44:20 [INFO] [FTP] Uploaded C:\Users\472709\AppData\Local\Temp\MockFiles_221aa553-6970-42af-8331-3220987969f6\testfile.txt to remote_testfile.txt&#xD;
+[xUnit.net 00:00:01.90]   Finished:    AdmLodPrototype.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

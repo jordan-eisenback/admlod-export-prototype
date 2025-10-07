@@ -5,6 +5,7 @@ using AdmLodPrototype.Interfaces;
 using AdmLodPrototype.Models;
 using System;
 using System.Collections.Generic;
+using AdmLodExportSimulator.Logging;
 
 public class ExportServiceTests
 {
@@ -67,7 +68,6 @@ public class ExportServiceTests
         mockProductRepo.Setup(r => r.GetProducts()).Returns(new List<Product>());
         mockGroupRepo.Setup(r => r.GetProductGroups()).Returns(new List<ProductGroup>());
         mockGroupRepo.Setup(r => r.GetProductGroupAssignments()).Returns(new List<ProductGroupAssignment>());
-
         mockResponseGen.Setup(r => r.GenerateResponse(It.IsAny<string>()))
             .Returns("Error: No products found");
 
@@ -81,6 +81,9 @@ public class ExportServiceTests
         var exportPath = $"MockFiles/test_export_{Guid.NewGuid()}.txt";
         var responseSuccessPath = $"MockFiles/test_response_success_{Guid.NewGuid()}.txt";
         var responseErrorPath = $"MockFiles/test_response_error_{Guid.NewGuid()}.txt";
+        var logPath = $"MockFiles/test_log_{Guid.NewGuid()}.txt";
+
+        Logger.Initialize(logPath); // ✅ Ensure logger is initialized
 
         // Act
         service.RunExport(
@@ -89,6 +92,9 @@ public class ExportServiceTests
             responseSuccessPath: responseSuccessPath,
             responseErrorPath: responseErrorPath
         );
+
+        Logger.Flush();
+        Logger.Dispose();
 
         // Assert
         mockFtpUploader.Verify(u => u.Upload(It.IsAny<string>(), "adm_export.txt"), Times.Once);
